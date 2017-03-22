@@ -1,0 +1,39 @@
+Proyecto Carro de Compras
+
+Catalogo de productos (nombre, precio, fotos, descripcion, stock)
+	Listado de productos
+	producto desplegado
+Usuarios(nombre, email, clave, foto)
+		Administrador: puede ver y modificar todas las compras.
+		Cliente: Ve sus compras con un historial.
+	Puede dar de alta productos, modificarlos y borrarlos.
+	Se registra con email y clave.
+	debe poder recuperar clave.
+
+Carro de compras
+	Listado de productos
+	totales
+
+
+
+
+USAR PHP,HTML,JS,CSS,MySQL
+
+
+
+
+
+Bienvenida!
+	Login
+		Login Admin
+			Menu Admin
+				Catalogo Admin
+				Listados
+		Login Usuario
+			Menu Usuario
+				Catalogo Usuario
+				Carro de compras
+				ABM Productos
+	Signin
+	
+	Mensaje de bienvenida
