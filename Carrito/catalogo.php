@@ -9,9 +9,6 @@ if($_SESSION['login_user']==NULL){
 $query="SELECT * FROM producto";
 $result = mysqli_query($connection, $query);
 
-$query1="SELECT * FROM producto WHERE id_usuario = " . $_SESSION['id_usuario'] . "";
-$result1= mysqli_query($connection, $query);
-
 mysqli_close($connection);
 ?>
 
