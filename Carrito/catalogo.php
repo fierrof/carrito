@@ -2,7 +2,7 @@
 include("dbConfig.php");
 session_start();
 
-if($_SESSION['login_user']==NULL){
+if($_SESSION['email']==NULL){
 	header("location:index.php");
 }
 
