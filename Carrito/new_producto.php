@@ -68,9 +68,6 @@ mysqli_close($connection);
 	<title></title>
 </head>
 <body>
-	<h1><?php echo $query ?></h1>
-	<h1><?php echo $target_file ?></h1>
-	<h1>.<?php echo $imageFileType ?></h1>	
 	<form action="new_producto.php" enctype="multipart/form-data" method="POST">	
 		<p>Nombre del Producto:</p><input type="text" name="nombre">
 		<p>Cantidad en Stock:</p><input type="text" name="cantidad">
