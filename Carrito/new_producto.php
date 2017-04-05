@@ -66,6 +66,7 @@ mysqli_close($connection);
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<form action="new_producto.php" enctype="multipart/form-data" method="POST">	

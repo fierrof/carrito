@@ -23,6 +23,7 @@ mysqli_close($connection);
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<h1>Signup</h1>

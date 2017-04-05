@@ -15,6 +15,7 @@ mysqli_close($connection);
 <html>
 <head>
 	<title>Mis Productos</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<h1>Mis Productos </h1>
