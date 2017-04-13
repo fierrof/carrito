@@ -19,23 +19,27 @@ mysqli_close($connection);
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Catalogo</h1>
-	<form action="catalogo.php" method="POST">		
-		<?php while ($row = mysqli_fetch_assoc($result)) {?> <!-- preguntar aca que es associated array -->		
-		<div class="gallery">
-			<a target="_blank" href="URL DESCRIPCION DE PRODUCTO">
-				<img src=<?php echo $row["image"]?>  alt=<?php echo $row["nombre"]?> width="300" height="200">
-			</a>
-			<div class="desc"><?php echo $row["nombre"] ." ". $row["cantidad"] ." ". $row["precio"];?></div>
-		</div>		
-		<?php } ?>		
-	</form>	
-	<div>
-		<form action="logout.php" method="POST">
-			<input type="submit" name="logout" value="Log Out">
-		</form>	
-		<form action="mis_productos.php" method="POST">
-			<input type="submit" name="logout" value="Mis Productos">
+	<div class="background" >
+		<div class="logo">
+			<img src="images/logo/logo.png" alt="logo">	
+		</div>
+		<div class="panel">			
+			<a href="catalogo.php" class="panel_btn">Home</a>
+			<a href="mis_productos.php" class="panel_btn">Mis Productos</a>
+			<a href="new_producto.php" class="panel_btn">Postear Producto</a>
+			<a href="contacto.php" class="panel_btn">Contacto</a>
+			<a href="logout.php" class="btn_logout"><img src="images/iconos/logout.png"></a>			
+		</div>
+		<h1>Catalogo Completo</h1>
+		<form action="catalogo.php" method="POST">		
+			<?php while ($row = mysqli_fetch_assoc($result)) {?> <!-- preguntar aca que es associated array -->	
+			<div class="gallery">
+				<a target="_blank" href="URL DESCRIPCION DE PRODUCTO">
+					<img src=<?php echo $row["image"]?>  alt=<?php echo $row["nombre"]?> width="300" height="200">
+				</a>
+				<div class="desc"><?php echo $row["nombre"] . " - $ " . $row["precio"];?></div>
+			</div>		
+			<?php } ?>		
 		</form>		
 	</div>	
 </body>

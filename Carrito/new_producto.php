@@ -65,25 +65,32 @@ mysqli_close($connection);
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Nuevo Producto</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<form action="new_producto.php" enctype="multipart/form-data" method="POST">	
-		<p>Nombre del Producto:</p><input type="text" name="nombre">
-		<p>Cantidad en Stock:</p><input type="text" name="cantidad">
-		<p>Precio:</p><input type="text" name="precio">
-		<p>Descripcion:</p><textarea type="text" name="descripcion"></textarea>
-		<br>
-		<input type="file" name="fileToUpload" id="fileToUpload">
-		<br>				
-		<input type="submit" value="Agregar">
-	</form>
-	<form action="catalogo.php">
-		<input type="submit" value="Volver a Catalogo">
-	</form>
-	<form action="mis_productos.php">
-		<input type="submit" value="Volver a Mis Productos">
-	</form>
+	<div class="background" >
+		<div class="logo">
+			<img src="images/logo/logo.png" alt="logo">	
+		</div>
+
+		<div class="panel">			
+			<a href="catalogo.php" class="panel_btn">Home</a>
+			<a href="mis_productos.php" class="panel_btn">Mis Productos</a>
+			<a href="new_producto.php" class="panel_btn">Postear Producto</a>
+			<a href="contacto.php" class="panel_btn">Contacto</a>
+			<a href="logout.php" class="btn_logout"><img src="images/iconos/logout.png"></a>			
+		</div>
+		<form action="new_producto.php" enctype="multipart/form-data" method="POST" ><br>
+			<input type="text" name="nombre" placeholder="Nombre del Producto"><br>	
+			<input type="text" name="cantidad" placeholder="Cantidad en stock"><br>
+			<input type="text" name="precio" placeholder="Precio"><br>
+			<p>Descripcion:</p><textarea type="text" name="descripcion"></textarea>
+			<br><br>
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<br><br><br>
+			<input type="submit" value="Agregar">
+		</form>
+	</div>
 </body>
 </html>

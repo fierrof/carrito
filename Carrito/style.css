@@ -1,53 +1,68 @@
+
+* {
+	box-sizing: border-box;
+}
+
 body {
-	background-color: #006677;
-	margin-top: 100px;    
-	margin-right: 150px;
-	margin-left: 80px;
+	background-color: #006677;  
+	background-image: url("images/background/background.jpg");
+	margin-left: 30%;
+	margin-right: 30%;
 }
 
-/*form{
-	display: inline-block;
-	position: fixed;
-	width: 100%;
-	max-width: 350px;
-	height: auto;
-	max-height: 200px;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	background: #ccc;
+.background{
+	height:100vh;	
+	background-color: grey;
+	background-image: url("images/background/background1.jpg");
+
+}
+.logo img{
+	width: 200px;
+}
+
+/*panel de botones*/
+.panel {	
+	background-color: black;
 	padding: 10px;
-}*/
-
-h1 {    
-	color: #CCCCCC;
-	background-color: #111111;
-}
-
-.button1 {
-	color: #CCCCCC;
 
 }
+.panel_btn{
+	
+	color: white;
+	padding: 15px 15px;	
+	text-decoration: none;
+	display: inline-block;	
 
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
+}
+.btn_logout{
+	float: right;
+	padding: 7px 15px;
+
+
+}
+/*Galeria de fotos*/
+.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 150px;
+
 }
 
-div.gallery:hover {
-    border: 1px solid #777;
+.gallery:hover {
+	border: 1px solid #777;
 }
 
-div.gallery img {
-    width: 100%;
-    height: auto;
+.gallery img {
+	width: 100%;
+	height: auto;
 }
 
-div.desc {
-    padding: 15px;
-    text-align: center;
+.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+form{
+	margin-left: 20px;
 }
