@@ -35,7 +35,7 @@ mysqli_close($connection);
 			<?php while ($row = mysqli_fetch_assoc($result)) {?> <!-- preguntar aca que es associated array -->	
 			<div class="gallery">
 				<a target="_blank" href="URL DESCRIPCION DE PRODUCTO">
-					<img src=<?php echo $row["image"]?>  alt=<?php echo $row["nombre"]?> width="300" height="200">
+					<img src=<?php echo $row["image"]?>  alt=<?php echo $row["nombre"]?> width="300" height="200" class="gallery_img">
 				</a>
 				<div class="desc"><?php echo $row["nombre"] . " - $ " . $row["precio"];?></div>
 			</div>		

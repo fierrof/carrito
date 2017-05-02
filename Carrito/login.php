@@ -28,3 +28,31 @@ if(isset($_POST['submit'])){
 	}
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<link rel="stylesheet" href="style.css">	
+</head>
+<body>
+	<div class="background" >
+		<div class="logo">
+			<img src="images/logo/logo.png" alt="logo">	
+		</div>
+		<div class="panel">			
+			<a href="catalogo.php" class="panel_btn">Home</a>			
+			<a href="contacto.php" class="panel_btn">Contacto</a>				
+		</div>
+		<div class="input_form">
+			<form action="login.php" method="POST">
+				<br>
+				<input type="text" name="email" placeholder="E-Mail" class="textbox01" /><br>
+				<input type="password" name="pass" placeholder="Password" class="textbox01" /><br><br>
+				<a href="new_user.php">Signup</a>
+				<input type="submit" name="submit" value="Login" class="button1" /><br>				
+			</form>
+		</div>		
+	</div>
+</body>
+</html>

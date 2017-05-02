@@ -9,7 +9,7 @@ if(isset($_POST['nombre']) && isset($_POST['cantidad']) && isset($_POST['precio'
 	$precio = $_POST['precio'];		
 
 	if(isset($_FILES["fileToUpload"])){
-		$target_dir = "images/";
+		$target_dir = "images/productos/";
 		$filename = basename($_FILES['fileToUpload']['name']);	
 		$imageFileType = pathinfo($filename,PATHINFO_EXTENSION);
 		$target_file = $target_dir . $nombre . "." . $imageFileType;
@@ -49,15 +49,16 @@ if(isset($_POST['nombre']) && isset($_POST['cantidad']) && isset($_POST['precio'
 	// if everything is ok, try to upload file
 	} else {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+			$query = "INSERT INTO producto (nombre,cantidad,precio,image,id_usuario) VALUES ('$nombre','$cantidad','$precio','" . $target_file . "'," . $_SESSION['id_usuario'] . ")";
+			mysqli_query($connection,$query);
 			echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 		} else {
 			echo "Sorry, there was an error uploading your file.";
 		}
 	}
 }
-$query = "INSERT INTO producto (nombre,cantidad,precio,image,id_usuario) VALUES ('$nombre','$cantidad','$precio','" . $target_file . "'," . $_SESSION['id_usuario'] . ")";
 
-mysqli_query($connection,$query);
+
 }
 mysqli_close($connection);
 ?>
@@ -79,9 +80,9 @@ mysqli_close($connection);
 			<a href="mis_productos.php" class="panel_btn">Mis Productos</a>
 			<a href="new_producto.php" class="panel_btn">Postear Producto</a>
 			<a href="contacto.php" class="panel_btn">Contacto</a>
-			<a href="logout.php" class="btn_logout"><img src="images/iconos/logout.png"></a>			
+			<a href="logout.php" class="btn_logout"><img src="images/iconos/logout.png"></a>
 		</div>
-		<form action="new_producto.php" enctype="multipart/form-data" method="POST" ><br>
+		<div class="input_form"><form action="new_producto.php" enctype="multipart/form-data" method="POST" ><br>
 			<input type="text" name="nombre" placeholder="Nombre del Producto"><br>	
 			<input type="text" name="cantidad" placeholder="Cantidad en stock"><br>
 			<input type="text" name="precio" placeholder="Precio"><br>
@@ -90,7 +91,8 @@ mysqli_close($connection);
 			<input type="file" name="fileToUpload" id="fileToUpload">
 			<br><br><br>
 			<input type="submit" value="Agregar">
-		</form>
+		</form></div>
+		
 	</div>
 </body>
 </html>

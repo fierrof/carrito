@@ -32,19 +32,19 @@ mysqli_close($connection);
 		</div>
 		<div class="panel">			
 			<a href="catalogo.php" class="panel_btn">Home</a>			
-			<a href="contacto.php" class="panel_btn">Contacto</a>
-			<a href="logout.php" class="btn_logout"><img src="images/iconos/logout.png"></a>			
+			<a href="contacto.php" class="panel_btn">Contacto</a>			
 		</div>
-		<h2>Para registrarse completar los sigientes datos:</h2>
-		<form action="new_user.php" method="POST" >
-			<input type="text" name="nombre" placeholder="Nombre"><br>
-			<input type="text" name="apellido" placeholder="Apellido"><br>
-			<input type="email" name="email" placeholder="E-Mail"><br>
-			<input type="email" name="email_ver" placeholder="Confirmar E-Mail"><br>
-			<input type="password" name="pass" placeholder="Contraseña"><br>
-			<br>
-			<input type="submit" value="Signup">
-		</form>
+		<div class="input_form">			
+			<form action="new_user.php" method="POST" >
+				<input type="text" name="nombre" placeholder="Nombre"><br>
+				<input type="text" name="apellido" placeholder="Apellido"><br>
+				<input type="email" name="email" placeholder="E-Mail"><br>
+				<input type="email" name="email_ver" placeholder="Confirmar E-Mail"><br>
+				<input type="password" name="pass" placeholder="Contraseña"><br>
+				<br>
+				<input type="submit" value="Signup">
+			</form>
+		</div>		
 	</div>
 </body>
 </html>

@@ -55,7 +55,7 @@ body {
 
 .gallery img {
 	width: 100%;
-	height: auto;
+	height: 120px;
 }
 
 .desc {
@@ -65,4 +65,28 @@ body {
 
 form{
 	margin-left: 20px;
+}
+
+
+.input_form {
+
+	margin: auto;
+	margin-top: 20%;
+	width: 50%;
+	border: 3px solid black;
+	padding: 10px;
+
+}
+.textbox01{
+	width: 300px;
+	margin: 0 auto;
+}
+.button1{
+	float:right;
+	margin-right: 10%;
+	margin-bottom: 20%;
+	background-color: black;
+	color:white;
+	width: 50px;
+	height: 30px;
 }
